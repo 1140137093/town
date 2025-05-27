@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Debug Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-item { margin: 10px 0; padding: 10px; background: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h1>Encoding Debug Test</h1>
+    
+    <div class="test-item">
+        <strong>Chinese Characters:</strong>
+        <br>首页 聊天 我的 社区 商城 资讯 活动
+    </div>
+    
+    <div class="test-item">
+        <strong>Emoji Test:</strong>
+        <br>?9?2 ?9?5 ?9?6 ?9?4 ?9?3 ?0?6 ?9?4 ?7?5?1?5 ?9?0 ?9?6
+    </div>
+    
+    <div class="test-item">
+        <strong>Full Sentences:</strong>
+        <br>欢迎来到小镇！这是一个测试页面。
+        <br>如果您能正确看到这些中文，说明编码工作正常。
+    </div>
+    
+    <div class="test-item">
+        <strong>Page Encoding Info:</strong>
+        <br>Document charset: <span id="charset"></span>
+        <br>Document encoding: <span id="encoding"></span>
+    </div>
+    
+    <script>
+        document.getElementById('charset').textContent = document.characterSet || document.charset || 'Unknown';
+        document.getElementById('encoding').textContent = document.inputEncoding || 'Unknown';
+        
+        // Test Chinese text
+        const testText = '中文编码测试';
+        console.log('Test text:', testText);
+        console.log('Text length:', testText.length);
+        console.log('Character codes:', testText.split('').map(c => c.charCodeAt(0)));
+    </script>
+</body>
+</html> 

@@ -1,0 +1,158 @@
+<template>
+	<view class="container">
+		<view class="header">
+			<text class="title">首页</text>
+		</view>
+		
+		<view class="banner">
+			<view class="banner-item">
+				<text class="banner-text">欢迎来到小镇</text>
+			</view>
+		</view>
+		
+		<view class="content">
+			<view class="feature-grid">
+				<view class="feature-item">
+					<text class="feature-icon">??</text>
+					<text class="feature-text">社区</text>
+				</view>
+				<view class="feature-item">
+					<text class="feature-icon">?</text>
+					<text class="feature-text">商城</text>
+				</view>
+				<view class="feature-item">
+					<text class="feature-icon">?</text>
+					<text class="feature-text">资讯</text>
+				</view>
+				<view class="feature-item">
+					<text class="feature-icon">?</text>
+					<text class="feature-text">活动</text>
+				</view>
+			</view>
+			
+			<view class="news-section">
+				<text class="section-title">最新动态</text>
+				<view class="news-item">
+					<text class="news-title">小镇新功能上线了！</text>
+					<text class="news-desc">快来体验我们全新的功能特性</text>
+				</view>
+				<view class="news-item">
+					<text class="news-title">社区活动火热进行中</text>
+					<text class="news-desc">参与活动赢取丰厚奖品</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script setup>
+
+</script>
+
+<style lang="scss">
+.container {
+	flex: 1;
+	background-color: #f5f5f5;
+}
+
+.header {
+	background-color: #007aff;
+	height: 88rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	.title {
+		color: white;
+		font-size: 18px;
+		font-weight: bold;
+	}
+}
+
+.banner {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	height: 300rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30rpx;
+	
+	.banner-item {
+		text-align: center;
+		
+		.banner-text {
+			color: white;
+			font-size: 24px;
+			font-weight: bold;
+		}
+	}
+}
+
+.content {
+	padding: 0 30rpx;
+}
+
+.feature-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 40rpx;
+}
+
+.feature-item {
+	width: 48%;
+	background-color: white;
+	border-radius: 12rpx;
+	padding: 40rpx 20rpx;
+	text-align: center;
+	margin-bottom: 20rpx;
+	
+	.feature-icon {
+		font-size: 30px;
+		margin-bottom: 20rpx;
+		display: block;
+	}
+	
+	.feature-text {
+		font-size: 16px;
+		color: #333;
+		font-weight: bold;
+	}
+}
+
+.news-section {
+	background-color: white;
+	border-radius: 12rpx;
+	padding: 30rpx;
+	
+	.section-title {
+		font-size: 18px;
+		font-weight: bold;
+		color: #333;
+		margin-bottom: 30rpx;
+		display: block;
+	}
+}
+
+.news-item {
+	padding: 20rpx 0;
+	border-bottom: 1px solid #f0f0f0;
+	
+	&:last-child {
+		border-bottom: none;
+	}
+	
+	.news-title {
+		font-size: 16px;
+		color: #333;
+		font-weight: bold;
+		margin-bottom: 10rpx;
+		display: block;
+	}
+	
+	.news-desc {
+		font-size: 14px;
+		color: #666;
+	}
+}
+</style>

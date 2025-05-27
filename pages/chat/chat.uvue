@@ -1,0 +1,116 @@
+<template>
+	<view class="container">
+		<view class="header">
+			<text class="title">聊天</text>
+		</view>
+		<view class="chat-list">
+			<view class="chat-item">
+				<view class="avatar">
+					<text class="avatar-text">A</text>
+				</view>
+				<view class="chat-content">
+					<view class="chat-info">
+						<text class="username">张三</text>
+						<text class="time">10:30</text>
+					</view>
+					<text class="message">你好，最近怎么样？</text>
+				</view>
+			</view>
+			<view class="chat-item">
+				<view class="avatar">
+					<text class="avatar-text">B</text>
+				</view>
+				<view class="chat-content">
+					<view class="chat-info">
+						<text class="username">李四</text>
+						<text class="time">09:15</text>
+					</view>
+					<text class="message">今天天气不错呢</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script setup>
+
+</script>
+
+<style lang="scss">
+.container {
+	flex: 1;
+	background-color: #f5f5f5;
+}
+
+.header {
+	background-color: #007aff;
+	height: 88rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	.title {
+		color: white;
+		font-size: 18px;
+		font-weight: bold;
+	}
+}
+
+.chat-list {
+	padding: 20rpx;
+}
+
+.chat-item {
+	background-color: white;
+	border-radius: 12rpx;
+	padding: 20rpx;
+	margin-bottom: 20rpx;
+	display: flex;
+	align-items: center;
+	
+	.avatar {
+		width: 80rpx;
+		height: 80rpx;
+		background-color: #007aff;
+		border-radius: 40rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 20rpx;
+		
+		.avatar-text {
+			color: white;
+			font-size: 16px;
+			font-weight: bold;
+		}
+	}
+	
+	.chat-content {
+		flex: 1;
+		
+		.chat-info {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 8rpx;
+			
+			.username {
+				font-size: 16px;
+				font-weight: bold;
+				color: #333;
+			}
+			
+			.time {
+				font-size: 12px;
+				color: #999;
+			}
+		}
+		
+		.message {
+			font-size: 14px;
+			color: #666;
+			line-height: 1.4;
+		}
+	}
+}
+</style> 

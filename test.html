@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>编码测试页面</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+            margin: 0;
+        }
+        .test-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #007aff;
+            margin-top: 0;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .emoji {
+            font-size: 24px;
+            line-height: 1.5;
+        }
+        .result-success {
+            color: green;
+            font-weight: bold;
+        }
+        .result-error {
+            color: red;
+            font-weight: bold;
+        }
+        .back-link {
+            color: #007aff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-card">
+        <h1>🔧 编码测试页面</h1>
+        <p><strong>如果您能正确看到以下中文内容，说明编码工作正常：</strong></p>
+        
+        <div class="test-card">
+            <h2>📱 基本中文测试</h2>
+            <p>你好，世界！</p>
+            <p>这是一个测试页面，用来验证中文编码是否正确。</p>
+            <p>包含标点符号：，。！？；：""''（）【】</p>
+        </div>
+        
+        <div class="test-card">
+            <h2>🎯 功能模块测试</h2>
+            <p>首页 | 聊天 | 我的</p>
+            <p>社区 | 商城 | 资讯 | 活动</p>
+            <p>个人信息 | 设置 | 钱包 | 客服</p>
+        </div>
+        
+        <div class="test-card">
+            <h2>🌟 Emoji表情测试</h2>
+            <div class="emoji">
+                🏠 🛒 📰 🎯 👤 ⚙️ 💰 📞 🚀 📱
+            </div>
+        </div>
+        
+        <div class="test-card">
+            <h2>✅ 测试结果</h2>
+            <p id="result">正在检测...</p>
+        </div>
+        
+        <p><a href="/" class="back-link">← 返回主应用</a></p>
+    </div>
+    
+    <script>
+        // 检测编码是否正确
+        function checkEncoding() {
+            const testText = '中文编码测试';
+            const result = document.getElementById('result');
+            
+            // 检测中文字符
+            const chineseRegex = /[\u4e00-\u9fa5]/;
+            const hasValidChinese = chineseRegex.test(testText);
+            
+            if (hasValidChinese && testText === '中文编码测试') {
+                result.innerHTML = '✅ <span class="result-success">编码正常！</span> 中文显示正确。';
+            } else {
+                result.innerHTML = '❌ <span class="result-error">编码异常！</span> 请检查字符编码设置。';
+            }
+        }
+        
+        // 页面加载完成后执行检测
+        window.onload = checkEncoding;
+    </script>
+</body>
+</html> 

@@ -1,0 +1,136 @@
+<template>
+	<view class="container">
+		<view class="header">
+			<view class="user-info">
+				<view class="avatar">
+					<text class="avatar-text">我</text>
+				</view>
+				<view class="user-details">
+					<text class="username">用户名</text>
+					<text class="user-desc">这是个人简介</text>
+				</view>
+			</view>
+		</view>
+		
+		<view class="menu-list">
+			<view class="menu-item">
+				<text class="menu-icon">?</text>
+				<text class="menu-text">个人信息</text>
+				<text class="menu-arrow">></text>
+			</view>
+			<view class="menu-item">
+				<text class="menu-icon">??</text>
+				<text class="menu-text">设置</text>
+				<text class="menu-arrow">></text>
+			</view>
+			<view class="menu-item">
+				<text class="menu-icon">??</text>
+				<text class="menu-text">关于我们</text>
+				<text class="menu-arrow">></text>
+			</view>
+			<view class="menu-item">
+				<text class="menu-icon">?</text>
+				<text class="menu-text">我的钱包</text>
+				<text class="menu-arrow">></text>
+			</view>
+			<view class="menu-item">
+				<text class="menu-icon">?</text>
+				<text class="menu-text">联系客服</text>
+				<text class="menu-arrow">></text>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script setup>
+
+</script>
+
+<style lang="scss">
+.container {
+	flex: 1;
+	background-color: #f5f5f5;
+}
+
+.header {
+	background-color: #007aff;
+	padding: 40rpx 30rpx;
+	
+	.user-info {
+		display: flex;
+		align-items: center;
+		
+		.avatar {
+			width: 120rpx;
+			height: 120rpx;
+			background-color: rgba(255, 255, 255, 0.2);
+			border-radius: 60rpx;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 30rpx;
+			
+			.avatar-text {
+				color: white;
+				font-size: 24px;
+				font-weight: bold;
+			}
+		}
+		
+		.user-details {
+			flex: 1;
+			
+			.username {
+				display: block;
+				color: white;
+				font-size: 20px;
+				font-weight: bold;
+				margin-bottom: 10rpx;
+			}
+			
+			.user-desc {
+				color: rgba(255, 255, 255, 0.8);
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.menu-list {
+	margin-top: 20rpx;
+	background-color: white;
+}
+
+.menu-item {
+	display: flex;
+	align-items: center;
+	padding: 30rpx;
+	border-bottom: 1px solid #f0f0f0;
+	
+	&:last-child {
+		border-bottom: none;
+	}
+	
+	.menu-icon {
+		font-size: 20px;
+		margin-right: 20rpx;
+		width: 40rpx;
+		text-align: center;
+	}
+	
+	.menu-text {
+		flex: 1;
+		font-size: 16px;
+		color: #333;
+	}
+	
+	.menu-arrow {
+		color: #999;
+		font-size: 16px;
+	}
+	
+	&:active {
+		background-color: #f0f0f0;
+	}
+}
+</style> 

@@ -1,0 +1,22 @@
+{
+  "name": "town",
+  "version": "1.0.0",
+  "description": "uni-app x town project",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "open": "^8.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^5.0.0",
+    "sass": "^1.32.0"
+  },
+  "browserslist": [
+    "Android >= 4.4",
+    "ios >= 9"
+  ]
+} 
